@@ -13,19 +13,19 @@ int numElements;
 
 node *readyList;
 
-//creates the new heap, return OK or SYSERR.
+//creates the new heap
 void newheap();
 
-//insert a process of PID with the given key into the heap
-void heapinsert(int pid, int key);
+//insert a new node into the heap
+void heapinsert(int value, int key);
 
-//removes the root node and return its process id.
+//removes the root node and return its value.
 int heapgethead();
 
-//returns the key value at the root node of the heap without removing the node.
+//returns the value at the root node of the heap without removing the node.
 int heapminkey();
 
-//find and remove the process with the given pid from the heap. Status returns the process id or SYSERR 
+//find and remove the node with the given value from the heap.
 int heapgetitem(int);
 
 //resizes the array if needed

@@ -42,8 +42,7 @@
 	}
 }*/
 
-//creates the new heap, return OK or SYSERR.
-//status newheap() {
+
 void newheap() {
 	arraySize = 10;//20;
 	numElements = 0;
@@ -51,8 +50,7 @@ void newheap() {
 	//return OK;
 }
 
-//insert a process of PID with the given key into the heap
-//status heapinsert( pid32 pid, int32 key) {
+
 void heapinsert(int pid, int key) {
 	//verifies there is space in the heap
 	if (numElements + 1 == arraySize) {
@@ -90,7 +88,6 @@ void heapinsert(int pid, int key) {
 	}
 }
 
-//removes the root node and return its process id.
 int heapgethead() {
 	node rightChild;
 	int rightChildLoc;
@@ -167,7 +164,6 @@ int heapgethead() {
 	return root.value;
 }
 
-//returns the key value at the root node of the heap without removing the node.
 int heapminkey() {
 	if(numElements != 0) {
 		//heap has a root node
@@ -178,7 +174,6 @@ int heapminkey() {
 	}
 }
 
-//find and remove the process with the given pid from the heap. Status returns the process id or SYSERR 
 int heapgetitem(int item) {
 	int i = 0;
 	node returnNode;
