@@ -51,7 +51,7 @@ void newheap() {
 }
 
 
-void heapinsert(int pid, int key) {
+void heapinsert(int value, int key) {
 	//verifies there is space in the heap
 	if (numElements + 1 == arraySize) {
 		reSizeArray();
@@ -59,7 +59,7 @@ void heapinsert(int pid, int key) {
 	
 	node n;
 	n.key = key;
-	n.value = pid;
+	n.value = value;
 	numElements++;
 	readyList[numElements] = n;
 	int nLoc = numElements;
